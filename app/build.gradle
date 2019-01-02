@@ -11,9 +11,10 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                cppFlags "-std=c++11 -frtti -fexceptions"
+                cppFlags "-std=c++11 -frtti  -fexceptions"
             }
         }
+
     }
     buildTypes {
         release {
@@ -26,6 +27,9 @@ android {
             path "CMakeLists.txt"
         }
     }
+
+
+
     sourceSets { main { jni.srcDirs = ['src/main/jni', 'src/main/jniLibs/'] } }
 }
 
